@@ -1,0 +1,74 @@
+body {
+  background-color: #fffec6;
+  margin: 20px;
+}
+
+:root {
+  --radius: 200px;
+  --arm-width: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.digital-wrapper {
+  display: inline;
+}
+
+.digital-clock,
+.digital-clock-ms {
+  font-size: 5rem;
+  font-family: monospace;
+}
+
+.analogue-clock {
+  position: relative;
+  border: 20px solid rgb(0, 255, 213);
+  background-color: #000;
+  border-radius: 50%;
+  min-width: calc(var(--radius) * 2);
+  min-height: calc(var(--radius) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.arm {
+  position: absolute;
+  width: var(--arm-width);
+  transform-origin: calc(var(--arm-width) / 2) 100%;
+  left: calc(var(--radius) - calc(var(--arm-width) / 2));
+  border-bottom-right-radius: calc(var(--arm-width) / 2);
+  border-bottom-left-radius: calc(var(--arm-width) / 2);
+  background-color: rgba(255, 0, 140, 0.85);
+}
+
+.arm.milliseconds {
+  height: var(--radius);
+  top: 0;
+}
+
+.arm.seconds {
+  height: calc(var(--radius) - 40px);
+  top: 40px;
+}
+
+.arm.minutes {
+  height: calc(var(--radius) - 80px);
+  top: 80px;
+}
+
+.arm.hours {
+  height: calc(var(--radius) - 120px);
+  top: 120px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}

@@ -22,7 +22,7 @@ body {
 
 .digital-clock,
 .digital-clock-ms {
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: monospace;
 }
 
@@ -71,4 +71,18 @@ body {
 
 .m-b-20 {
   margin-bottom: 20px;
+}
+
+.footer {
+  font-family: monospace;
+  font-size: 1.5rem;
+  padding: 60px 0 40px 0;
+}
+
+.footer > a {
+  color: #e2007c;
+}
+
+.footer > a:hover {
+  color: #ff229c;
 }

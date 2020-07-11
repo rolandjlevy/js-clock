@@ -86,3 +86,11 @@ body {
 .footer > a:hover {
   color: #ff229c;
 }
+
+.new-tab-icon::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
+  font-size: 1rem;
+}

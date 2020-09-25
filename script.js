@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }
   seconds();
   setInterval(seconds, SECS);
-
+  
 });

@@ -1,4 +1,4 @@
-# JavaScript Clock
+# JavaScript Clock 🕐
 
 ### Description
 - A digital and analogue clock made mainly with JavaScript

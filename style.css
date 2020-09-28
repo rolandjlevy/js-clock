@@ -1,11 +1,28 @@
-body {
-  background-color: #fffec6;
-  margin: 20px;
-}
-
 :root {
   --radius: 200px;
   --arm-width: 16px;
+  --mint-green:#00ffd5;
+  --pink-faded:#ff008cd9;
+  --pink-mid:#ff229c;
+  --pink-dark:#e2007c;
+  --pastel-yellow:#fffec6;
+  --deep-blue: #000044;
+  transition: all 0.25s ease;
+}
+
+body {
+  background-color: var(--pastel-yellow);
+  font-family: monospace;
+  margin: 20px;
+  color: var(--deep-blue);
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.25s ease;
 }
 
 .container {
@@ -23,13 +40,13 @@ body {
 .digital-clock,
 .digital-clock-ms {
   font-size: 4rem;
-  font-family: monospace;
+  transition: all 0.25s ease;
 }
 
 .analogue-clock {
   position: relative;
-  border: 20px solid rgb(0, 255, 213);
-  background-color: #000;
+  border: 20px solid var(--mint-green);
+  background-color: var(--deep-blue);
   border-radius: 50%;
   min-width: calc(var(--radius) * 2);
   min-height: calc(var(--radius) * 2);
@@ -37,6 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-shadow: #00333366 0 8px 45px 5px;
 }
 
 .arm {
@@ -46,7 +64,7 @@ body {
   left: calc(var(--radius) - calc(var(--arm-width) / 2));
   border-bottom-right-radius: calc(var(--arm-width) / 2);
   border-bottom-left-radius: calc(var(--arm-width) / 2);
-  background-color: rgba(255, 0, 140, 0.85);
+  background-color: var(--pink-faded);
 }
 
 .arm.milliseconds {
@@ -60,13 +78,13 @@ body {
 }
 
 .arm.minutes {
-  height: calc(var(--radius) - 80px);
-  top: 80px;
+  height: calc(var(--radius) - 70px);
+  top: 70px;
 }
 
 .arm.hours {
-  height: calc(var(--radius) - 120px);
-  top: 120px;
+  height: calc(var(--radius) - 100px);
+  top: 100px;
 }
 
 .m-b-20 {
@@ -77,14 +95,15 @@ body {
   font-family: monospace;
   font-size: 1.5rem;
   padding: 60px 0 40px 0;
+  text-align: center;
 }
 
 .footer > a {
-  color: #e2007c;
+  color: var(--pink-dark);
 }
 
 .footer > a:hover {
-  color: #ff229c;
+  color: var(--pink-mid);
 }
 
 .new-tab-icon::after {
@@ -93,4 +112,20 @@ body {
   content: "\f35d";
   margin-left: 5px;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --radius: 150px;
+    transition: all 0.25s ease;
+  }
+  .digital-clock,
+  .digital-clock-ms {
+    font-size: 3rem;
+    transition: all 0.25s ease;
+  }
+  h3 {
+    font-size: 1.5rem;
+    transition: all 0.25s ease;
+  }
 }

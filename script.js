@@ -1,6 +1,9 @@
 const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => document.querySelectorAll(selector);
 
-const MS = 1, SECS = 1000, MINS = 60 * 1000, MILLINC = 360 / 1000
+const MS = 1, SECS = 1000, MINS = 60 * 1000, MILLINC = 360 / 1000;
+
+$$('.arm').forEach(item => item.classList.add('init'));
 
 const runClock = () => {
   const ms = new Date().getMilliseconds();

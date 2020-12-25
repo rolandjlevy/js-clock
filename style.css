@@ -65,6 +65,13 @@ h3 {
   border-bottom-right-radius: calc(var(--arm-width) / 2);
   border-bottom-left-radius: calc(var(--arm-width) / 2);
   background-color: var(--pink-faded);
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+}
+
+.arm.init {
+  opacity: 1;
+  transition: opacity 0.5s ease; 
 }
 
 .arm.milliseconds {

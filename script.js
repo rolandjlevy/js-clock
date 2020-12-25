@@ -5,10 +5,7 @@ const secondsArm = document.querySelector('.arm.seconds');
 const minutesArm = document.querySelector('.arm.minutes');
 const hoursArm = document.querySelector('.arm.hours');
 
-const MS = 1;
-const SECS = 1000;
-const MINS = 60 * 1000;
-const MILLINC = 360 / 1000
+const MS = 1, SECS = 1000, MINS = 60 * 1000, MILLINC = 360 / 1000
 
 const milliSeconds = () => {
   const ms = new Date().getMilliseconds();

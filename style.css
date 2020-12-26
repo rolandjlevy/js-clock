@@ -15,9 +15,9 @@
 
 body {
   background-color: var(--pastel-yellow);
-  font-family: monospace;
+  font-family: 'Courier New', Courier, monospace;
   margin: 20px;
-  color: var(--deep-blue);
+  overflow: hidden;
 }
 
 h3 {
@@ -68,15 +68,18 @@ h3 {
   left: calc(var(--radius) - calc(var(--arm-width) / 2));
   border-bottom-right-radius: calc(var(--arm-width) / 2);
   border-bottom-left-radius: calc(var(--arm-width) / 2);
-  /* background-color: var(--pink-faded); */
   background: linear-gradient(var(--pink-faded), var(--pink-very-faded));
   opacity: 0;
-  transition: opacity 0.5s ease; 
+  --size: 1;
+  --diff: calc(var(--radius) / var(--size));
+  height: calc(var(--radius) - var(--diff));
+  top: var(--diff);
+  transition: opacity 1s ease; 
 }
 
 .arm.init {
   opacity: 1;
-  transition: opacity 0.5s ease; 
+  transition: opacity 1s ease; 
 }
 
 .arm.milliseconds {
@@ -85,18 +88,15 @@ h3 {
 }
 
 .arm.seconds {
-  height: calc(var(--radius) - 40px);
-  top: 40px;
+  --size: 5;
 }
 
 .arm.minutes {
-  height: calc(var(--radius) - 70px);
-  top: 70px;
+  --size: 3;
 }
 
 .arm.hours {
-  height: calc(var(--radius) - 100px);
-  top: 100px;
+  --size: 2;
 }
 
 .m-b-20 {
@@ -104,7 +104,6 @@ h3 {
 }
 
 .footer {
-  font-family: monospace;
   font-size: 1.5rem;
   color: var(--deep-blue);
   padding: 60px 0 40px 0;
@@ -127,18 +126,40 @@ h3 {
   font-size: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   :root {
-    --radius: 150px;
+    --radius: 160px;
     transition: all 0.25s ease;
   }
   .digital-clock,
   .digital-clock-ms {
-    font-size: 3rem;
+    font-size: 3.25rem;
     transition: all 0.25s ease;
   }
   h3 {
     font-size: 1.5rem;
     transition: all 0.25s ease;
+  }
+  .footer {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  :root {
+    --radius: 120px;
+    transition: all 0.25s ease;
+  }
+  .digital-clock,
+  .digital-clock-ms {
+    font-size: 2.5rem;
+    transition: all 0.25s ease;
+  }
+  h3 {
+    font-size: 1.25rem;
+    transition: all 0.25s ease;
+  }
+  .footer {
+    font-size: 1.125rem;
   }
 }

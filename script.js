@@ -1,7 +1,7 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
-const MS = 1, SECS = 1000, MINS = 60 * 1000, MILLINC = 360 / 1000;
+const MS = 1, MILLINC = 360 / 1000;
 
 $$('.arm').forEach(item => item.classList.add('init'));
 
@@ -17,7 +17,8 @@ const runClock = () => {
   $('.arm.milliseconds').style.transform = `rotate(${millDegrees}deg)`;
   $('.arm.seconds').style.transform = `rotate(${6 * Number(secs)}deg)`;
   $('.arm.minutes').style.transform = `rotate(${6 * Number(mins)}deg)`;
-  $('.arm.hours').style.transform = `rotate(${30 * Number(hours)}deg)`;
+  const accurateHour = hours + parseFloat(mins / 60) + parseFloat(secs / 3600);
+  $('.arm.hours').style.transform = `rotate(${15 * accurateHour}deg)`;
 }
 
 setInterval(runClock, MS);

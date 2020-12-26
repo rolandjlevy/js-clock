@@ -1,6 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
-const MS = 1, MILLINC = 360 / 1000;
+const speed = 15, millInc = 360 / 1000;
 
 $$('.arm').forEach(item => item.classList.add('init'));
 
@@ -12,7 +12,7 @@ const runClock = () => {
   const hoursStr = (hours % 12).toString().padStart(2, '0');
   $('.digital-clock').innerHTML = `${hoursStr}:${mins}:${secs}:`;
   $('.digital-clock-ms').innerHTML = ms.toString().padStart(3, '0');
-  const millDegrees = Math.round(Number(ms) * MILLINC);
+  const millDegrees = Math.round(Number(ms) * millInc);
   const accurateHour = hours + parseFloat(mins / 60) + parseFloat(secs / 3600);
   $('.arm.milliseconds').style.transform = `rotate(${millDegrees}deg)`;
   $('.arm.seconds').style.transform = `rotate(${6 * secs}deg)`;
@@ -20,4 +20,4 @@ const runClock = () => {
   $('.arm.hours').style.transform = `rotate(${30 * accurateHour}deg)`;
 }
 
-setInterval(runClock, MS);
+setInterval(runClock, speed);

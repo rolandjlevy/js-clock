@@ -129,7 +129,11 @@ h3 {
 @media only screen and (max-width: 640px) {
   :root {
     --radius: 160px;
+    --arm-width: 13px;
     transition: all 0.25s ease;
+  }
+  .analogue-clock {
+    border: 16px solid var(--mint-green);
   }
   .digital-clock,
   .digital-clock-ms {
@@ -148,7 +152,11 @@ h3 {
 @media only screen and (max-width: 480px) {
   :root {
     --radius: 120px;
+    --arm-width: 10px;
     transition: all 0.25s ease;
+  }
+  .analogue-clock {
+    border: 12px solid var(--mint-green);
   }
   .digital-clock,
   .digital-clock-ms {

@@ -2,6 +2,7 @@
   --radius: 200px;
   --arm-width: 16px;
   --mint-green:#00ffd5;
+  --pink-very-faded:#ff008c8c;
   --pink-faded:#ff008cd9;
   --pink-mid:#ff229c;
   --pink-dark:#e2007c;
@@ -67,7 +68,8 @@ h3 {
   left: calc(var(--radius) - calc(var(--arm-width) / 2));
   border-bottom-right-radius: calc(var(--arm-width) / 2);
   border-bottom-left-radius: calc(var(--arm-width) / 2);
-  background-color: var(--pink-faded);
+  /* background-color: var(--pink-faded); */
+  background: linear-gradient(var(--pink-faded), var(--pink-very-faded));
   opacity: 0;
   transition: opacity 0.5s ease; 
 }

@@ -4,6 +4,8 @@ const speed = 15, millInc = 360 / 1000;
 
 $$('.arm').forEach(item => item.classList.add('init'));
 
+$('#year').textContent = new Date().getFullYear();
+
 const runClock = () => {
   const ms = new Date().getMilliseconds();
   const secs = new Date().getSeconds().toString().padStart(2, '0');

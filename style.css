@@ -69,17 +69,10 @@ h3 {
   border-bottom-right-radius: calc(var(--arm-width) / 2);
   border-bottom-left-radius: calc(var(--arm-width) / 2);
   background: linear-gradient(var(--pink-faded), var(--pink-very-faded));
-  opacity: 0;
   --size: 1;
   --diff: calc(var(--radius) / var(--size));
   height: calc(var(--radius) - var(--diff));
   top: var(--diff);
-  transition: opacity 1s ease; 
-}
-
-.arm.init {
-  opacity: 1;
-  transition: opacity 1s ease; 
 }
 
 .arm.milliseconds {
@@ -101,6 +94,14 @@ h3 {
 
 .m-b-20 {
   margin-bottom: 20px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-l-n10 {
+  margin-left: -10px;
 }
 
 .footer {
@@ -160,7 +161,7 @@ h3 {
   }
   .digital-clock,
   .digital-clock-ms {
-    font-size: 2.5rem;
+    font-size: 2rem;
     transition: all 0.25s ease;
   }
   h3 {
@@ -171,3 +172,18 @@ h3 {
     font-size: 1.125rem;
   }
 }
+
+.fade-in {
+  animation: fadeInAnimation ease-in 1s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+    opacity: 0; 
+  } 
+  100% { 
+    opacity: 1; 
+  } 
+} 

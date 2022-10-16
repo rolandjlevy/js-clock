@@ -1,7 +1,7 @@
 # JavaScript Clock 🕐
 
 ### Description
-- A digital and analogue clock made with just 22 lines of JavaScript
+- A digital and analogue clock made with 22 lines of JavaScript
 
 ### Links
 - [Live demo](https://js-clock.rjlevy.repl.co/)

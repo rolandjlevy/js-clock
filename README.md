@@ -8,5 +8,5 @@
 - click 'Open in Browser' or from the Terminal click the link Forwarded Address link from PORTS
 
 ### Links
-- [Live demo](https://js-clock.rjlevy.repl.co/)
+- [Live demo](https://js-clock-six.vercel.app)
 - [Github](https://github.com/rolandjlevy/js-clock)
